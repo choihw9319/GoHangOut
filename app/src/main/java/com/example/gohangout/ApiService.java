@@ -1,21 +1,20 @@
 package com.example.gohangout;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
-import retrofit2.http.Query;
+import retrofit2.http.Path;
 
 public interface ApiService {
-    // 중복 체크를 위한 GET 요청 정의 (서버 API에 맞게 수정 필요)
-    @GET("/user/checkDuplicate")
-    Call<Boolean> checkDuplicate(@Query("152.67.209.177:3000") String name);
+    @PATCH("/account/update/")
+    Call<PostData> createPost(@Body PostData postData);
 
-        @POST("/logout")
-        Call<Void> logout();
+    @GET("/account/find/") // GET 요청 예
+    Call<ServerIdResponse> getServerId();
 
-        @DELETE("/deleteAccount")
-        Call<Void> deleteAccount();
-
-
+    @DELETE("/account/delete/{id}")
+    Call<Void> deleteAccount(@Path("id") String id);
 }

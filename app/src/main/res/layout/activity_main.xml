@@ -26,11 +26,11 @@
             android:gravity="center"
             android:text="놀러가자!"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="235dp"
+            android:layout_width="230dp"
             android:layout_height="match_parent" />
 
         <Button
@@ -82,8 +82,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintHorizontal_bias="0.5">
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
         <EditText
             android:id="@+id/Mypage_namestring"
             android:layout_width="wrap_content"
@@ -110,6 +115,27 @@
             android:textColor="@color/white"
             android:textSize="17dp"
             android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+                <EditText
+                android:id="@+id/Mypage_emailstring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:autofillHints=""
+                android:background="@drawable/search_box"
+                android:ems="10"
+                android:hint="이메일"
+                android:inputType="text"
+                android:minHeight="40dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="#AAAAAA" />
+
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -131,6 +157,8 @@
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+
 
         <EditText
             android:id="@+id/Mypage_homestring"
@@ -196,35 +224,37 @@
         android:orientation="vertical"
         app:layout_constraintHorizontal_bias="0.5">
 
-        <TextView
+        <Button
             android:id="@+id/MyPage_logoutbool"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="#00ff0000"
             android:gravity="center"
             android:text="로그아웃"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold" />
 
-        <TextView
+        <Button
             android:id="@+id/MyPage_secessionbool"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="회원탈퇴"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
-            android:layout_marginBottom="10dp"/>
+            android:background="#00ff0000"
+            android:text="회원탈퇴"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
-        <TextView
+        <Button
             android:id="@+id/MyPage_policybool"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:text="개인정보처리방침"
-            android:textSize="20dp"
+            android:textSize="15dp"
+            android:background="#00ff0000"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="5dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
